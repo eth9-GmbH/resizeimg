@@ -1,0 +1,8 @@
+engine = "ImageRs"
+threads = 4
+
+upstreams =[
+{ path = "/media/cf/(.*)$", upstream="https://images.ctfassets.net/{}"},
+{ path = "/media/products/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$", upstream = "https://zqy194.saas.contentserv.com/admin/ImageServer.php?ID={}@zqy194&force=true&preset=15&omitPreview=true&rand={}"},
+{ path = "/mediatest/(.*)$", upstream = "http://localhost:8000/{}"},
+]
